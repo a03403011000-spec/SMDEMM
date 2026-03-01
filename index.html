@@ -12,8 +12,6 @@
   --text:#1a2a3a;--sub:#5a7a96;--alt:#f4f8fd;
 }
 body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;}
-
-/* ── HEADER ── */
 .header{background:linear-gradient(120deg,var(--dark) 0%,var(--mid) 70%,#22577a 100%);padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);position:sticky;top:0;z-index:100;box-shadow:0 2px 16px rgba(0,0,0,.3);}
 .header-left{display:flex;align-items:center;gap:12px;}
 .logo{width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 3px 10px rgba(201,168,76,.4);}
@@ -27,29 +25,17 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
 .search-input::placeholder{color:rgba(255,255,255,.4);}
 .search-input:focus{background:rgba(255,255,255,.18);border-color:var(--gold);width:240px;}
 .search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:12px;color:rgba(255,255,255,.5);}
-
-/* ── TABS ── */
 .tabs{background:var(--dark);display:flex;padding:0 24px;gap:2px;border-bottom:1px solid rgba(255,255,255,.06);}
 .tab{padding:10px 18px;font-size:12px;font-weight:600;color:#7a9ab8;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;letter-spacing:.3px;white-space:nowrap;}
 .tab:hover{color:var(--gold2);}
 .tab.active{color:var(--gold);border-bottom-color:var(--gold);}
-
-/* ── MAIN ── */
 .main{flex:1;padding:20px 24px;max-width:1400px;margin:0 auto;width:100%;}
-
-/* ── SECTION ── */
 .section{margin-bottom:24px;}
 .section-hdr{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
 .section-title{font-size:13px;font-weight:700;color:var(--mid);letter-spacing:.5px;}
 .section-count{background:var(--mid);color:var(--white);border-radius:10px;padding:1px 9px;font-size:10px;font-weight:700;}
-
-/* ── GRID ── */
 .grid{display:grid;gap:12px;}
-.grid-2{grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
 .grid-3{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
-.grid-4{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
-
-/* ── CARD ── */
 .fcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;cursor:pointer;transition:all .22s;display:flex;align-items:center;gap:12px;position:relative;overflow:hidden;}
 .fcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:12px 0 0 12px;}
 .fcard:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.1);border-color:var(--gold);}
@@ -73,8 +59,6 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
 .tS{background:#c0392b;}.tI{background:#d35400;}.tM{background:#b7950b;}
 .tF{background:#1e8449;}.tE{background:#1a5276;}.tR{background:#6c3483;}
 .tL1{background:var(--dark);}.tT{background:var(--mid);}
-
-/* ── CONFIG MODAL ── */
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:200;align-items:center;justify-content:center;}
 .overlay.show{display:flex;}
 .modal{background:var(--white);border-radius:16px;width:min(720px,96vw);max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.3);}
@@ -96,34 +80,37 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
 .btn-save{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--dark);border:0;border-radius:8px;padding:9px 22px;font-weight:700;font-size:13px;cursor:pointer;}
 .btn-save:hover{opacity:.9;}
 .btn-cancel{background:var(--alt);color:var(--sub);border:1px solid var(--border);border-radius:8px;padding:9px 18px;font-size:13px;cursor:pointer;}
-.btn-import{background:#1e8449;color:var(--white);border:0;border-radius:6px;padding:7px 12px;font-size:11px;cursor:pointer;}
-.btn-export{background:var(--mid);color:var(--white);border:0;border-radius:6px;padding:7px 12px;font-size:11px;cursor:pointer;}
+.btn-export{background:#1e8449;color:var(--white);border:0;border-radius:6px;padding:7px 12px;font-size:11px;cursor:pointer;}
 .hint{font-size:10px;color:var(--sub);margin-top:6px;line-height:1.6;background:#f0f4f8;padding:8px 10px;border-radius:6px;border-left:3px solid var(--gold);}
-
-/* ── TOAST ── */
 .toast{position:fixed;bottom:24px;right:24px;background:var(--dark);color:var(--white);padding:12px 20px;border-radius:10px;font-size:12px;z-index:300;transform:translateY(80px);opacity:0;transition:all .3s;border-left:4px solid var(--gold);}
 .toast.show{transform:translateY(0);opacity:1;}
-
-/* ── EMPTY ── */
 .empty{text-align:center;padding:40px 20px;color:var(--sub);}
 .empty-icon{font-size:40px;margin-bottom:10px;}
 .empty-text{font-size:13px;}
-
-/* ── STATS BAR ── */
 .stats{background:var(--dark);display:flex;border-bottom:1px solid rgba(255,255,255,.06);}
 .stat{flex:1;padding:10px 0;text-align:center;border-right:1px solid rgba(255,255,255,.06);}
 .stat:last-child{border-right:none;}
 .stat-n{font-size:17px;font-weight:800;color:var(--gold);}
 .stat-l{font-size:10px;color:#7a9ab8;margin-top:1px;}
-
-/* ── NO URL badge ── */
 .no-url{position:absolute;top:8px;right:8px;background:#fde8e6;color:#c0392b;border-radius:4px;font-size:9px;padding:1px 5px;font-weight:700;}
-
-/* ── RECENT ── */
 .recent-bar{background:var(--white);border-bottom:1px solid var(--border);padding:8px 24px;display:flex;align-items:center;gap:10px;overflow-x:auto;}
 .recent-label{font-size:10px;color:var(--sub);white-space:nowrap;font-weight:700;}
 .recent-chip{background:var(--alt);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:11px;color:var(--mid);cursor:pointer;white-space:nowrap;transition:all .15s;display:flex;align-items:center;gap:5px;}
 .recent-chip:hover{background:var(--mid);color:var(--white);border-color:var(--mid);}
+
+/* ── 同步状态指示器 ── */
+.sync-dot{width:8px;height:8px;border-radius:50%;background:#888;display:inline-block;margin-right:5px;transition:background .3s;}
+.sync-dot.ok{background:#2ecc71;box-shadow:0 0 6px #2ecc71;}
+.sync-dot.err{background:#e74c3c;}
+.sync-dot.ing{background:#f39c12;animation:pulse .8s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.sync-label{font-size:10px;color:#a8c4d8;}
+
+/* ── Firebase 配置引导 ── */
+.fb-setup{background:linear-gradient(135deg,#1a3c5e,#0d1b2a);border:2px dashed var(--gold);border-radius:12px;padding:24px;text-align:center;margin:20px 0;}
+.fb-setup h3{color:var(--gold);font-size:15px;margin-bottom:10px;}
+.fb-setup p{color:#a8c4d8;font-size:12px;line-height:1.8;}
+.fb-setup code{background:rgba(255,255,255,.1);padding:2px 6px;border-radius:4px;color:var(--gold2);font-size:11px;}
 </style>
 </head>
 <body>
@@ -138,6 +125,8 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
     </div>
   </div>
   <div class="header-right">
+    <span class="sync-dot" id="syncDot"></span>
+    <span class="sync-label" id="syncLabel">连接中...</span>
     <div class="search-wrap">
       <span class="search-icon">🔍</span>
       <input class="search-input" id="searchInput" placeholder="搜索文件/文件夹..." oninput="doSearch(this.value)"/>
@@ -175,7 +164,9 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
 </div>
 
 <!-- MAIN -->
-<div class="main" id="mainContent"></div>
+<div class="main" id="mainContent">
+  <div class="empty"><div class="empty-icon">⏳</div><div class="empty-text">正在连接 Firebase，加载数据中...</div></div>
+</div>
 
 <!-- CONFIG MODAL -->
 <div class="overlay" id="overlay">
@@ -187,9 +178,9 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
     <div class="modal-body" id="modalBody"></div>
     <div class="modal-footer">
       <button class="btn-export" onclick="exportConfig()">📤 导出配置</button>
-      <label class="btn-import" style="cursor:pointer">📥 导入配置<input type="file" accept=".json" style="display:none" onchange="importConfig(this)"/></label>
+      <label class="btn-export" style="cursor:pointer;background:var(--mid)">📥 导入配置<input type="file" accept=".json" style="display:none" onchange="importConfig(this)"/></label>
       <button class="btn-cancel" onclick="closeConfig()">取消</button>
-      <button class="btn-save" onclick="saveConfig()">💾 保存配置</button>
+      <button class="btn-save" onclick="saveConfig()">💾 保存并同步</button>
     </div>
   </div>
 </div>
@@ -197,14 +188,55 @@ body{font-family:'Microsoft YaHei',Arial,sans-serif;background:var(--bg);color:v
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
 
+<!-- ══ Firebase SDK ══ -->
+<script type="module">
+  // ╔══════════════════════════════════════════════════════╗
+  // ║  ⚠️  请将下方 firebaseConfig 替换为你自己的配置！      ║
+  // ╚══════════════════════════════════════════════════════╝
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getDatabase, ref, onValue, set, update, get }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey:            "YOUR_API_KEY",
+    authDomain:        "YOUR_PROJECT.firebaseapp.com",
+    databaseURL:       "https://YOUR_PROJECT-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId:         "YOUR_PROJECT",
+    storageBucket:     "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId:             "YOUR_APP_ID"
+  };
+
+  // ── 初始化 ──
+  const app = initializeApp(firebaseConfig);
+  const db  = getDatabase(app);
+  const urlsRef = ref(db, 'simfer_urls');
+
+  // ── 暴露给全局 ──
+  window._fbSet    = (id, url) => set(ref(db, `simfer_urls/${id}`), url);
+  window._fbDel    = (id)      => set(ref(db, `simfer_urls/${id}`), null);
+  window._fbUpdate = (obj)     => update(urlsRef, obj);
+  window._fbGet    = ()        => get(urlsRef).then(s => s.val() || {});
+
+  // ── 实时监听：任何人改了都会推送到所有客户端 ──
+  onValue(urlsRef, (snapshot) => {
+    window.urls = snapshot.val() || {};
+    setSyncStatus('ok', '已同步');
+    render();
+  }, (error) => {
+    setSyncStatus('err', '连接失败');
+    showToast('❌ Firebase 连接失败：' + error.message);
+  });
+
+  setSyncStatus('ing', '连接中...');
+</script>
+
 <script>
 // ══════════════════════════════════════════════════
 //  数据定义
 // ══════════════════════════════════════════════════
 const ITEMS = [
-  // L1
   {id:"L1-P-01",title:"矿山设备管理总制度",elem:"L1",type:"总制度",icon:"🏛",desc:"顶层总制度，统领全体系"},
-  // S
   {id:"S-P-01",title:"设备安全管理制度",elem:"S",type:"制度",icon:"🛡",desc:"设备安全管理总体要求"},
   {id:"S-P-02",title:"上锁挂牌(LOTO)与能量隔离制度",elem:"S",type:"制度",icon:"🔐",desc:"LOTO能量隔离全流程"},
   {id:"S-P-03",title:"设备作业许可与风险管控制度",elem:"S",type:"制度",icon:"📋",desc:"作业许可证管理"},
@@ -218,7 +250,6 @@ const ITEMS = [
   {id:"S-F-07",title:"维修现场5S与文明施工检查表",elem:"S",type:"表单",icon:"🧹",desc:"现场5S管理"},
   {id:"S-F-08",title:"承包商设备准入检查表",elem:"S",type:"表单",icon:"📝",desc:"承包商设备准入"},
   {id:"S-F-09",title:"维修安全交底记录",elem:"S",type:"表单",icon:"📢",desc:"作业前安全交底"},
-  // I
   {id:"I-P-01",title:"关键设备与关键部件完整性管理制度",elem:"I",type:"制度",icon:"🔩",desc:"KEL/KCL完整性管理"},
   {id:"I-P-02",title:"变更管理(MOC)与技术状态控制制度",elem:"I",type:"制度",icon:"🔄",desc:"MOC变更管理流程"},
   {id:"I-P-03",title:"检验检测与法定合规管理制度",elem:"I",type:"制度",icon:"🏛",desc:"法定检验合规管理"},
@@ -230,7 +261,6 @@ const ITEMS = [
   {id:"I-F-06",title:"检验检测报告归档清单",elem:"I",type:"表单",icon:"📁",desc:"检验报告归档管理"},
   {id:"I-F-07",title:"设备校验计量器具台账",elem:"I",type:"台账",icon:"⚖",desc:"计量器具管理台账"},
   {id:"I-F-08",title:"设备验收与试运行记录",elem:"I",type:"表单",icon:"✅",desc:"设备验收试运行"},
-  // M
   {id:"M-P-01",title:"点检、润滑与维护保养制度",elem:"M",type:"制度",icon:"🔧",desc:"PM体系核心制度"},
   {id:"M-P-02",title:"维修工单与故障处理制度",elem:"M",type:"制度",icon:"🛠",desc:"工单管理与故障响应"},
   {id:"M-P-03",title:"计划检修与大修管理制度",elem:"M",type:"制度",icon:"📅",desc:"计划检修与大修管理"},
@@ -247,7 +277,6 @@ const ITEMS = [
   {id:"M-F-09",title:"大修项目管理表",elem:"M",type:"表单",icon:"🏗",desc:"大修项目跟踪"},
   {id:"M-F-10",title:"维修质量问题与返工记录",elem:"M",type:"表单",icon:"⚠",desc:"质量问题追踪"},
   {id:"M-F-11",title:"外委维修验收与质保卡",elem:"M",type:"表单",icon:"🤝",desc:"外委验收质保"},
-  // F
   {id:"F-P-01",title:"设备成本与预算管理制度",elem:"F",type:"制度",icon:"💰",desc:"成本预算管理"},
   {id:"F-P-02",title:"设备资产台账与折旧报废管理制度",elem:"F",type:"制度",icon:"📊",desc:"资产台账与报废管理"},
   {id:"F-F-01",title:"设备全生命周期成本(LCC)测算表",elem:"F",type:"表单",icon:"📈",desc:"LCC全生命周期成本"},
@@ -256,7 +285,6 @@ const ITEMS = [
   {id:"F-F-04",title:"备件领用退库单模板",elem:"F",type:"模板",icon:"📋",desc:"备件出入库管理"},
   {id:"F-F-05",title:"修旧利废再制造评审表",elem:"F",type:"表单",icon:"♻",desc:"修旧利废评审"},
   {id:"F-F-06",title:"资产转固报废处置审批表",elem:"F",type:"表单",icon:"🗑",desc:"资产报废审批"},
-  // E
   {id:"E-P-01",title:"设备环境与能源管理制度",elem:"E",type:"制度",icon:"🌿",desc:"环境与能源管理"},
   {id:"E-F-01",title:"油品危化品清单与SDS索引",elem:"E",type:"台账",icon:"⚗",desc:"危化品管理清单"},
   {id:"E-F-02",title:"防渗漏点检表(油液系统)",elem:"E",type:"表单",icon:"💧",desc:"防渗漏日常检查"},
@@ -264,7 +292,6 @@ const ITEMS = [
   {id:"E-F-04",title:"危废台账",elem:"E",type:"台账",icon:"♻",desc:"危废管理台账"},
   {id:"E-F-05",title:"能耗统计表(油耗电耗)",elem:"E",type:"表单",icon:"⚡",desc:"能耗统计分析"},
   {id:"E-F-06",title:"噪声排放检测记录",elem:"E",type:"表单",icon:"🔊",desc:"噪声排放监测"},
-  // R
   {id:"R-P-01",title:"可靠性工程与持续改进制度",elem:"R",type:"制度",icon:"📊",desc:"可靠性管理核心制度"},
   {id:"R-F-01",title:"可靠性指标字典与口径表",elem:"R",type:"模板",icon:"📖",desc:"KPI定义与口径"},
   {id:"R-F-02",title:"设备停机事件编码表",elem:"R",type:"模板",icon:"🔢",desc:"停机事件编码体系"},
@@ -273,7 +300,6 @@ const ITEMS = [
   {id:"R-F-05",title:"PM优化RCM分析记录",elem:"R",type:"表单",icon:"⚙",desc:"RCM分析与PM优化"},
   {id:"R-F-06",title:"状态监测计划与结果记录",elem:"R",type:"表单",icon:"📡",desc:"状态监测管理"},
   {id:"R-F-07",title:"可靠性改进项目清单(CI)",elem:"R",type:"台账",icon:"🚀",desc:"持续改进项目清单"},
-  // T
   {id:"T-01",title:"受控文件清单",elem:"T",type:"台账",icon:"📋",desc:"受控文件版本管理"},
   {id:"T-02",title:"设备主数据台账",elem:"T",type:"台账",icon:"🗃",desc:"全场设备主数据"},
   {id:"T-03",title:"关键设备清单与风险分级台账",elem:"T",type:"台账",icon:"⚠",desc:"KEL风险分级管理"},
@@ -295,58 +321,47 @@ const ELEM_LABELS = {
 };
 
 // ══════════════════════════════════════════════════
-//  状态
+//  状态（urls 由 Firebase 实时注入到 window.urls）
 // ══════════════════════════════════════════════════
-let urls = {};       // id -> google drive url
-let recent = [];     // [{id,title,url}]
+window.urls = {};
+let recent = [];
 let currentTab = 'all';
 let searchQ = '';
-let tempUrls = {};   // 配置弹窗临时值
+let tempUrls = {};
 
-function loadState() {
-  try { urls = JSON.parse(localStorage.getItem('simfer_urls')||'{}'); } catch(e){urls={};}
-  try { recent = JSON.parse(localStorage.getItem('simfer_recent')||'[]'); } catch(e){recent=[];}
-}
-function saveState() {
-  localStorage.setItem('simfer_urls', JSON.stringify(urls));
-  localStorage.setItem('simfer_recent', JSON.stringify(recent));
-}
+try { recent = JSON.parse(localStorage.getItem('simfer_recent')||'[]'); } catch(e){recent=[];}
+
+// ── 同步状态显示 ──
+window.setSyncStatus = function(status, label) {
+  const dot = document.getElementById('syncDot');
+  const lbl = document.getElementById('syncLabel');
+  dot.className = 'sync-dot ' + status;
+  lbl.textContent = label;
+};
 
 // ══════════════════════════════════════════════════
 //  渲染主界面
 // ══════════════════════════════════════════════════
-function render() {
+window.render = function() {
   const mc = document.getElementById('mainContent');
   let items = ITEMS;
-
-  // 过滤
   if (currentTab !== 'all') items = items.filter(i => i.elem === currentTab);
   if (searchQ) {
     const q = searchQ.toLowerCase();
     items = items.filter(i => i.title.toLowerCase().includes(q) || i.id.toLowerCase().includes(q) || i.desc.toLowerCase().includes(q));
   }
-
   if (items.length === 0) {
-    mc.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">未找到匹配的文件，请尝试其他关键词</div></div>`;
+    mc.innerHTML = `<div class="empty"><div class="empty-icon">🔍</div><div class="empty-text">未找到匹配的文件</div></div>`;
     return;
   }
-
-  // 按要素分组
   const groups = {};
-  items.forEach(i => {
-    if (!groups[i.elem]) groups[i.elem] = [];
-    groups[i.elem].push(i);
-  });
-
+  items.forEach(i => { if (!groups[i.elem]) groups[i.elem]=[]; groups[i.elem].push(i); });
   let html = '';
-  const order = currentTab === 'all'
-    ? ['L1','S','I','M','F','E','R','T']
-    : [currentTab];
-
+  const order = currentTab==='all' ? ['L1','S','I','M','F','E','R','T'] : [currentTab];
   order.forEach(elem => {
     if (!groups[elem]) return;
     const grpItems = groups[elem];
-    const cfgd = grpItems.filter(i=>urls[i.id]).length;
+    const cfgd = grpItems.filter(i=>window.urls[i.id]).length;
     html += `<div class="section">
       <div class="section-hdr">
         <span class="tag t${elem}">${elem}</span>
@@ -356,7 +371,7 @@ function render() {
       </div>
       <div class="grid grid-3">`;
     grpItems.forEach(item => {
-      const hasUrl = !!urls[item.id];
+      const hasUrl = !!window.urls[item.id];
       html += `<div class="fcard ${item.elem}" onclick="openItem('${item.id}')" title="${item.desc}">
         ${!hasUrl?'<span class="no-url">未配置</span>':''}
         <div class="fcard-icon">${item.icon}</div>
@@ -370,24 +385,23 @@ function render() {
     });
     html += `</div></div>`;
   });
-
   mc.innerHTML = html;
   updateStats();
   renderRecent();
-}
+};
 
 function updateStats() {
-  document.getElementById('cfgCount').textContent = Object.keys(urls).length;
+  document.getElementById('cfgCount').textContent = Object.keys(window.urls).length;
   document.getElementById('recentCount').textContent = recent.length;
 }
 
 function renderRecent() {
   const bar = document.getElementById('recentBar');
   const chips = document.getElementById('recentChips');
-  if (recent.length === 0) { bar.style.display='none'; return; }
-  bar.style.display = 'flex';
-  chips.innerHTML = recent.slice(0,8).map(r =>
-    `<div class="recent-chip" onclick="openUrl('${r.url}','${r.id}','${r.title.replace(/'/g,"\\'")}')">
+  if (recent.length===0){bar.style.display='none';return;}
+  bar.style.display='flex';
+  chips.innerHTML = recent.slice(0,8).map(r=>
+    `<div class="recent-chip" onclick="openUrl('${r.url}','${r.id}','${r.title.replace(/'/g,"\\'")}','${r.icon||'📁'}')">
       ${r.icon||'📁'} ${r.id}
     </div>`
   ).join('');
@@ -396,179 +410,163 @@ function renderRecent() {
 // ══════════════════════════════════════════════════
 //  打开文件
 // ══════════════════════════════════════════════════
-function openItem(id) {
+window.openItem = function(id) {
   const item = ITEMS.find(i=>i.id===id);
   if (!item) return;
-  const url = urls[id];
-  if (!url) {
-    showToast(`⚠ ${id} 尚未配置链接，请点击右上角「配置文件夹链接」`);
-    // 打开配置弹窗并定位到该项
-    openConfig(id);
-    return;
-  }
+  const url = window.urls[id];
+  if (!url) { showToast(`⚠ ${id} 尚未配置链接`); openConfig(id); return; }
   openUrl(url, id, item.title, item.icon);
-}
+};
 
-function openUrl(url, id, title, icon) {
+window.openUrl = function(url, id, title, icon) {
   window.open(url, '_blank');
-  // 记录最近访问
   recent = recent.filter(r=>r.id!==id);
   recent.unshift({id, title, url, icon: icon||'📁'});
-  if (recent.length > 20) recent = recent.slice(0,20);
-  saveState();
+  if (recent.length>20) recent=recent.slice(0,20);
+  localStorage.setItem('simfer_recent', JSON.stringify(recent));
   renderRecent();
   updateStats();
   showToast(`✅ 已打开：${id} ${title}`);
-}
+};
 
 // ══════════════════════════════════════════════════
 //  搜索 & Tab
 // ══════════════════════════════════════════════════
-function doSearch(q) {
+window.doSearch = function(q) {
   searchQ = q.trim();
-  if (searchQ) currentTab = 'all';
+  if (searchQ) currentTab='all';
   render();
-}
+};
 
-function switchTab(tab, el) {
-  currentTab = tab;
-  searchQ = '';
-  document.getElementById('searchInput').value = '';
+window.switchTab = function(tab, el) {
+  currentTab = tab; searchQ = '';
+  document.getElementById('searchInput').value='';
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
   render();
-}
+};
 
 // ══════════════════════════════════════════════════
 //  配置弹窗
 // ══════════════════════════════════════════════════
-function openConfig(focusId) {
-  tempUrls = {...urls};
+window.openConfig = function(focusId) {
+  tempUrls = {...window.urls};
   const body = document.getElementById('modalBody');
-
   const groups = {};
-  ITEMS.forEach(i => {
-    if (!groups[i.elem]) groups[i.elem] = [];
-    groups[i.elem].push(i);
-  });
-
-  let html = `
-    <div class="hint">
-      💡 将 Google Drive 文件夹或文件的分享链接粘贴到对应输入框。<br>
-      支持 Google Drive 文件夹链接（<code>https://drive.google.com/drive/folders/...</code>）或文件链接（<code>https://docs.google.com/...</code>）。<br>
-      配置后点击卡片即可一键直达。
-    </div><br>`;
-
-  const order = ['L1','S','I','M','F','E','R','T'];
-  order.forEach(elem => {
-    if (!groups[elem]) return;
-    html += `<div class="cfg-section"><h3><span class="tag t${elem}">${elem}</span> ${ELEM_LABELS[elem]||elem}</h3>`;
-    groups[elem].forEach(item => {
-      const val = tempUrls[item.id] || '';
-      html += `<div class="cfg-row" id="row_${item.id}">
+  ITEMS.forEach(i=>{ if(!groups[i.elem]) groups[i.elem]=[]; groups[i.elem].push(i); });
+  let html = `<div class="hint">
+    💡 将 Google Drive 文件夹或文件的分享链接粘贴到对应输入框。<br>
+    点击「<b>保存并同步</b>」后，所有人的页面将<b>实时更新</b>。
+  </div><br>`;
+  ['L1','S','I','M','F','E','R','T'].forEach(elem=>{
+    if(!groups[elem]) return;
+    html+=`<div class="cfg-section"><h3><span class="tag t${elem}">${elem}</span> ${ELEM_LABELS[elem]||elem}</h3>`;
+    groups[elem].forEach(item=>{
+      const val = tempUrls[item.id]||'';
+      html+=`<div class="cfg-row" id="row_${item.id}">
         <div class="cfg-label">${item.icon} ${item.id}<small>${item.title}</small></div>
         <input class="cfg-input" id="inp_${item.id}" value="${val}" placeholder="粘贴 Google Drive 链接..." oninput="tempUrls['${item.id}']=this.value.trim()"/>
         <button class="cfg-test" onclick="testUrl('${item.id}')">测试</button>
       </div>`;
     });
-    html += `</div>`;
+    html+=`</div>`;
   });
-
   body.innerHTML = html;
   document.getElementById('overlay').classList.add('show');
-
   if (focusId) {
     setTimeout(()=>{
-      const el = document.getElementById(`inp_${focusId}`);
-      if (el) { el.scrollIntoView({behavior:'smooth',block:'center'}); el.focus(); }
-    }, 200);
+      const el=document.getElementById(`inp_${focusId}`);
+      if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.focus();}
+    },200);
   }
-}
+};
 
-function closeConfig() {
+window.closeConfig = function() {
   document.getElementById('overlay').classList.remove('show');
-}
+};
 
-function saveConfig() {
-  // 从所有输入框读取最新值
-  ITEMS.forEach(item => {
-    const el = document.getElementById(`inp_${item.id}`);
-    if (el) {
-      const v = el.value.trim();
-      if (v) urls[item.id] = v;
-      else delete urls[item.id];
+window.saveConfig = async function() {
+  // 读取所有输入框最新值
+  const updates = {};
+  ITEMS.forEach(item=>{
+    const el=document.getElementById(`inp_${item.id}`);
+    if(el){
+      const v=el.value.trim();
+      updates[item.id] = v || null; // null 会删除该节点
     }
   });
-  saveState();
-  closeConfig();
-  render();
-  showToast(`✅ 配置已保存，共 ${Object.keys(urls).length} 条链接`);
-}
 
-function testUrl(id) {
-  const el = document.getElementById(`inp_${id}`);
-  const url = el ? el.value.trim() : '';
-  if (!url) { showToast('⚠ 请先输入链接'); return; }
-  window.open(url, '_blank');
-}
+  setSyncStatus('ing','保存中...');
+  try {
+    if (window._fbUpdate) {
+      await window._fbUpdate(updates);
+      closeConfig();
+      showToast(`✅ 已同步到云端，所有人实时更新`);
+    } else {
+      showToast('❌ Firebase 未连接，请刷新页面重试');
+    }
+  } catch(e) {
+    setSyncStatus('err','保存失败');
+    showToast('❌ 保存失败：' + e.message);
+  }
+};
+
+window.testUrl = function(id) {
+  const el=document.getElementById(`inp_${id}`);
+  const url=el?el.value.trim():'';
+  if(!url){showToast('⚠ 请先输入链接');return;}
+  window.open(url,'_blank');
+};
 
 // ══════════════════════════════════════════════════
-//  导出 / 导入配置
+//  导出 / 导入
 // ══════════════════════════════════════════════════
-function exportConfig() {
-  // 先读取当前输入框
-  ITEMS.forEach(item => {
-    const el = document.getElementById(`inp_${item.id}`);
-    if (el) { const v=el.value.trim(); if(v) tempUrls[item.id]=v; else delete tempUrls[item.id]; }
+window.exportConfig = function() {
+  ITEMS.forEach(item=>{
+    const el=document.getElementById(`inp_${item.id}`);
+    if(el){const v=el.value.trim();if(v)tempUrls[item.id]=v;else delete tempUrls[item.id];}
   });
-  const data = JSON.stringify(tempUrls, null, 2);
-  const blob = new Blob([data], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'SIMFER_文件链接配置.json';
+  const blob=new Blob([JSON.stringify(tempUrls,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='SIMFER_文件链接配置.json';
   a.click();
   showToast('📤 配置已导出');
-}
+};
 
-function importConfig(input) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = e => {
-    try {
-      const data = JSON.parse(e.target.result);
-      tempUrls = {...tempUrls, ...data};
-      // 更新输入框
-      Object.entries(data).forEach(([id, url]) => {
-        const el = document.getElementById(`inp_${id}`);
-        if (el) el.value = url;
+window.importConfig = function(input) {
+  const file=input.files[0];
+  if(!file) return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const data=JSON.parse(e.target.result);
+      tempUrls={...tempUrls,...data};
+      Object.entries(data).forEach(([id,url])=>{
+        const el=document.getElementById(`inp_${id}`);
+        if(el) el.value=url;
       });
-      showToast(`📥 已导入 ${Object.keys(data).length} 条配置`);
-    } catch(err) {
-      showToast('❌ 导入失败，请检查JSON格式');
-    }
+      showToast(`📥 已导入 ${Object.keys(data).length} 条配置，请点击「保存并同步」`);
+    }catch(err){showToast('❌ 导入失败，请检查JSON格式');}
   };
   reader.readAsText(file);
-  input.value = '';
-}
+  input.value='';
+};
 
 // ══════════════════════════════════════════════════
 //  Toast
 // ══════════════════════════════════════════════════
 let toastTimer;
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
+window.showToast = function(msg) {
+  const t=document.getElementById('toast');
+  t.textContent=msg;
   t.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(()=>t.classList.remove('show'), 3000);
-}
+  toastTimer=setTimeout(()=>t.classList.remove('show'),3000);
+};
 
-// ══════════════════════════════════════════════════
-//  初始化
-// ══════════════════════════════════════════════════
-loadState();
-render();
+// 初始渲染（Firebase 连接后会自动触发 render）
+renderRecent();
 </script>
 </body>
 </html>
